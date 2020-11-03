@@ -11,10 +11,8 @@ Panjab university;
 using namespace std;
 void solve()
 {
-  //start code
-  cout<<"Hello world"<<endl;
-  //comments were introduced
   
+
 }
 int main() 
 { 
