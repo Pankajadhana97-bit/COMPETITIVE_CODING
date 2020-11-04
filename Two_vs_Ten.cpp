@@ -21,16 +21,20 @@ void solve()
         break;
         flag=false;
     }
+    if(n%5==0)
+    {
+        count=1;
+        break;
+        flag=false;
+    }
     else
     {
-        n=n*2;
-        count++;
+        count=-1;
+        flag=false;
     }
   }
   if(flag==true)
     cout<<count<<endl;
-    if(n==1)
-    cout<<-1<<endl;
     else
     {
         cout<<"-1"<<endl;
