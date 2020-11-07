@@ -12,49 +12,29 @@ Panjab university;
 using namespace std;
 void solve()
 {
- int n;
- cin>>n;
- vector<int>v(n);
- for(int i=0;i<n;i++) cin>>v[i];
- sort(all(v),greater<int>());
- //for(auto x: v)cout<<x<<" ";
- if(n==1)
- cout<<v[0];
- if(n==2)
- cout<<v[0]<<endl;
- if(n==3)
- {
-   int a,b;
-   a=v[0];
-   b=v[1];
-   int count=b;
-   a=a-b;
-   b=v[2];
-   cout<<count+max(a,b)<<endl;
- }
+   int n;
+  cin>>n;
+  vector<int>v(n);
+  for(int i=0;i<n;i++) cin>>v[i];
+  sort(all(v),greater<int>());
+  if(n==1) cout<<v[0]<<endl;
+  if(n==2) cout<<v[0]<<endl;
+  if(n==3)
+    {
+    int sum=v[1];
+    int diff=v[0]-v[1];
+    sum+=max(diff,v[2]);
+    cout<<sum<<endl;
+     }
  if(n==4)
- {
-   int a,b;
-   int count=0;
-   a=v[0];
-   b=v[1];
-   count+=v[1];
-   a=a-b;
-   b=v[2];
-   count=count+min(a,b);
-   if(a>=b)
-   {
-     a=a-b;
-     count+=max(a,v[3]);
-   }
-   else
-   {
-     b=b-a;
-     count+=max(b,v[3]);
-   }
-   cout<<count<<endl;
-   
- }
+    {
+     int sum=v[1];
+     int diff=v[0]-v[1];
+     sum+=min(diff,v[2]);
+     int diff1=abs(v[2]-diff);
+     sum+=max(v[3],diff1);
+     cout<<sum<<endl;
+        }
  }
 int main() 
 { 
