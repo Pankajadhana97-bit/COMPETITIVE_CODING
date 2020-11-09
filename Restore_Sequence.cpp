@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+using namespace std;
 /*
 Pankaj Adhana
 Panjab university;
@@ -7,34 +8,42 @@ Panjab university;
 /* Defined values---------------------------------------------------- */
 #define fast_io ios_base::sync_with_stdio(false);cin.tie(NULL)
 #define cases  int t=1;cin>>t; while(t--) { solve();} return 0
+#define all(x) (x).begin(),(x).end()
 /*--------------------------------------------------------------------*/
-using namespace std;
+
 void solve()
 {
-  long long int num;
-  cin>>num;
-  long long int first[num];
-  long long int second[num];
-  long long int value=1000;
-  for (long long int i = 0; i < num; i++)cin>>second[i];
-  for (long long int i = 0; i < num; i++)first[i]=1;
-  for(long long int j=0;j<num;j++)
-  {
-      if(first[j]==1)
-      {
-          first[j]=value;
-      }
-      if(second[j]-1 != j)
-      {
-      first[second[j]-1]=(value)*first[second[j]-1];
-      }
-      value--;
+ long long int n;
+ cin>>n;
+ vector<long long int>arr(n);
+
+ for(long long int i=0;i<n;i++)
+  cin>>arr[i];
+ vector<long long int>res(n,-1);
+ long long int start = 4000000;
+ for(long long int i=0;i<n;i++){
+  if(res[i]!=-1)
+   continue;
+  else{
+   arr[i]--;
+   if(res[arr[i]]!=-1)
+   {
+    res[i]=res[arr[i]];
+   }
+   else{
+    res[i] = res[arr[i]] = start;
+    start--;
+   }
   }
-  for (long long int i = 0; i < num; i++)cout<<first[i]<<" ";
-  cout<<endl;
+ }
+ for(auto x:res)
+  cout<<x<<" ";
+ cout<<endl;
 }
-int main() 
-{ 
-    fast_io;
-    cases;
-} 
+
+int main()
+{
+   fast_io;
+   cases;
+    return 0;
+}
