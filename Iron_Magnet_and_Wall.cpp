@@ -21,32 +21,36 @@ void solve()
   map<int,int>mp;
 
   for(int i=0;i<n;i++){
-    if(s[i] == 'I'){
+    if(s[i] == 'I')
+    {
       iron.push(i);
       mp[i] = condition;
       if(mag.empty())
         continue;
-      while(!mag.empty()){
+      while(!mag.empty())
+      {
         int a = mag.front();
-        if(k-abs(a-i)-abs(mp[i]-mp[a])>0){
+        if(k-abs(a-i)-abs(mp[i]-mp[a])>0)
+        {
           result++;
           mag.pop();
           iron.pop();
           break;
           }
         mag.pop();
-
       }
     }
 
-    if(s[i] == 'M'){
+    if(s[i] == 'M')
+    {
       mag.push(i);
       mp[i] = condition;
       if(iron.empty())
         continue;
       while(!iron.empty()){
         int a = iron.front();
-        if(k-abs(a-i)-abs(mp[i]-mp[a])>0){
+        if(k-abs(a-i)-abs(mp[i]-mp[a])>0)
+        {
           result++;
           iron.pop();
           mag.pop();
