@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define int int64_t
+
 void solve() {
 	int N, M, K;
 	cin >> N >> M >> K;
