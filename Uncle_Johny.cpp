@@ -12,6 +12,19 @@ Panjab university;
 using namespace std;
 void solve()
 {
+  int n;
+  cin>>n;
+  int arr[n];
+  for(int i=0;i<n;i++) cin>>arr[i];
+  int k; //the value of k 
+  cin>>k;
+  int val =arr[k-1];
+  sort(arr,arr+n);
+  for(int i=0;i<n;i++)
+  {
+      if(val==arr[i])
+      cout<<i+1<<endl;
+  }
   
 }
 int main() 
