@@ -12,19 +12,33 @@ Panjab university;
 using namespace std;
 void solve()
 {
-  int n;
-  cin>>n;
-  int count=4;
-  if(n==1)cout<<3<<endl;
-  if(n==2)cout<<5<<endl;
-  if(n>2)
-  {
-      count+=(n-2)*2;
-      cout<<count<<endl;
-  }
-  
- 
+  	ll n,k;
+	cin>>n>>k;
+	ll arr[n];
+	for(ll i=0;i<n;i++) cin>>arr[i];
+		ll sum = 0;
+		ll count = 0;
+		for(ll i=0;i<n;i++) {
+			if(k < arr[i]) {
+				count = -1;
+				break;
+			}
+			sum += arr[i];
+			if(sum > k) {
+				count++;
+				sum = arr[i];
+			}
+			else if(sum == 0) 
+            {
+				count++;
+				sum = 0;
+			}
+		}
+		if(sum != 0 && count != -1) {
+			count++;
+		}
 
+		cout<<count<<endl;
 }
 int main() 
 { 

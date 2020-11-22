@@ -12,19 +12,23 @@ Panjab university;
 using namespace std;
 void solve()
 {
-  int n;
-  cin>>n;
-  int count=4;
-  if(n==1)cout<<3<<endl;
-  if(n==2)cout<<5<<endl;
-  if(n>2)
-  {
-      count+=(n-2)*2;
-      cout<<count<<endl;
-  }
-  
- 
-
+  ll n;
+	    cin>>n;
+	    if(n==1 || n%2==0)
+	    {
+	        cout<<"B"<<endl;
+	        continue;
+	    }
+	    if(n==3)
+	    {
+	        cout<<"A"<<endl;
+	        continue;
+	    }
+	    if(n%2==1)
+	    {
+	        cout<<"B"<<endl;
+	        continue;
+	    }
 }
 int main() 
 { 
