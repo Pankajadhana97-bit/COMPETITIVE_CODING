@@ -17,8 +17,6 @@ int maxSum(ll arr[], ll n, ll k)
   
     return res; 
 } 
-   
-// Driver code 
 int main() 
 {   
     ll t;
