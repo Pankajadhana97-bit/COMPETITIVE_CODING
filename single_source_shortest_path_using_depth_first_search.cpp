@@ -1,13 +1,3 @@
-/*
-// Sample code to perform I/O:
-
-cin >> name;                            // Reading input from STDIN
-cout << "Hi, " << name << ".\n";        // Writing output to STDOUT
-
-// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
-*/
-
-// Write your code here
 #include<bits/stdc++.h>
 using namespace std;
 vector<int> arr[1001];
@@ -45,8 +35,10 @@ void dfs(int node ,int data)
        int val;
        cin>>val;
        if(dist[val]<min_dist)
-       min_dist=dist[val] ,count=val;
-
+       {
+       min_dist=dist[val];
+       count=val;
+       }
        else
        {
         if(dist[val]==min_dist && val<count)
