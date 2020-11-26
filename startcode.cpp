@@ -12,11 +12,13 @@ Panjab university;
 using namespace std;
 void solve()
 {
- int n;
- cin>>n;
- int val=(int)sqrt(n);
- val-=val/3;
- cout<<val<<endl;
+ int n=1000;
+ for(int i=0;i<n;i++)
+ {
+ 	for(int j=0;j<i;j++)
+ 		cout<<"*";
+ 	    cout<<endl;
+ }
 }
 int main() 
 { 
