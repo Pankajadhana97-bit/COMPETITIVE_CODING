@@ -13,7 +13,6 @@ if(!visited[k])
         dfs(a[k][i]);
     }
 }
-
 int main()
 {
     int n;
@@ -24,13 +23,15 @@ int main()
         int p,q;
         cin>>p>>q;
         a[p].push_back(q);
+        a[q].push_back(p);
     }
     int a,b;
     cin>>a>>b;
     dfs(a);
     if(visited[b]==1)
-    cout<<"YES"<<endl;
-    else
-    cout<<"NO"<<endl;
-   
+
+   cout<<"YES"<<endl;
+   else
+   cout<<"NO"<<endl;
+   return 0;
 }
