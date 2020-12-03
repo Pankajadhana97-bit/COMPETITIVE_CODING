@@ -12,7 +12,7 @@ Panjab university;
 #define ll long long int
 /* -------------------------------------------------------------------- */
 using namespace std;
-int dp[1000];
+int dp[10];
 int recurrence(int num)
 {
   dp[0]=2;
