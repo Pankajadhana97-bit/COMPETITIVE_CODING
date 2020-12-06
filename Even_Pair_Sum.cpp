@@ -14,25 +14,24 @@ Panjab university;
 using namespace std; 
 void solve()
 {
-   string str1;
-   string str2;
-   cin>>str1>>str2;
-   int count=0;
-   int n=str2.length();
-   int m=str1.length();
-    for(int i=0;i<n;i++)
-   {
-       for(int j=0;j<m;j++)
-       if(str1[i]==str2[j])
-       count++;
-   }
-   if(count>=str1.length())
-   cout<<"YES"<<endl;
-   else
-   cout<<"NO"<<endl;
+  ll n,m;
+  cin>>n>>m;
+  if(n==1 && m==1)
+  cout<<1<<endl;
+  else
+  {
+    ll cnt1=0;ll cnt2=0;ll cnt3=0;ll cnt4=0;
+  cnt1=n/2;//even
+ cnt2=n-cnt1;//odd
+  cnt3=m/2;//even
+   cnt4=m-cnt3;//odd
+  ll tot=cnt4*cnt3;
+  cout<<(cnt1*cnt3)+(cnt2*cnt4)<<endl; 
+  }
 }
 int main() 
 { 
     fast_io;
      cases;
+    // solve();
 } 
