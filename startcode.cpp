@@ -12,7 +12,8 @@ Panjab university;
 using namespace std;
 void solve()
 {
- //praveen adhana
+
+    
 }
 int main() 
 { 

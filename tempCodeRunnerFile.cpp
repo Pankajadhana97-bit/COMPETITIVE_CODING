@@ -7,18 +7,20 @@ Panjab university;
 /* Defined values---------------------------------------------------- */
 #define fast_io ios_base::sync_with_stdio(false);cin.tie(NULL)
 #define cases  int t=1;cin>>t; while(t--) { solve();} return 0
-#define ll int64_t
+#define ll long long int 
 #define pi 3.14159265358993
+#define mod (int)1e9
+#define mod7 (int)1e7
+#define read(n) int n;cin>>n
+#define out(n) cout<<n
 /*--------------------------------------------------------------------*/
 using namespace std;
-void solve(int val1,int val2 )
+void solve()
 {
- return val1+val2;
+ //write you cuda here;
 }
 int main() 
 { 
     fast_io;
-    int a,b;
-    cin>>a>>b;
-    cout<<solve(a,b)<<endl;
+    cases;
 } 

@@ -16,11 +16,9 @@ void solve()
 {
      int n,k,i,sum=0,j;
      cin>>n>>k;
-     
      int a[n+1];
      for(i=1;i<=n;)
      {
-      //cout<<sum<<" ";
       if(k==0||k==n)
        break;
       if(sum+i<=i+1 && k>0)
