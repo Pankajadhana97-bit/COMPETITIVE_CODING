@@ -15,7 +15,18 @@ Panjab university;
 using namespace std;
 void solve()
 {
- 
+ int n;
+ cin>>n;
+ vector<int >v(n);
+ for(int i=0;i<n;i++)cin>>v[i];
+ cout<<v[0]<<" ";
+ for(int i=1;i<n/2+1;i++)
+ {
+     cout<<v[n-i]<<" "<<v[i]<<" ";
+     if(i==n/2+1)
+     cout<<v[n-1];
+ }
+ cout<<endl;
 }
 int main() 
 { 
