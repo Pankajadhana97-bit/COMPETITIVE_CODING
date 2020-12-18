@@ -27,7 +27,7 @@ void solve()
      ans[v[i]]=v[i];
      else
      {
-         if(ans[i]==0)
+         if(ans[i]==0)  
          ans[i]=0;
      }
      
