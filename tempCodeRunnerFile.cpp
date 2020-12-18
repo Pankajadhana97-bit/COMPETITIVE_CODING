@@ -15,7 +15,10 @@ Panjab university;
 using namespace std;
 void solve()
 {
- 
+ int a;
+ int b;
+ cin>>a>>b;
+ cout<<a+b<<endl;
 }
 int main() 
 { 
