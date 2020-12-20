@@ -3,28 +3,26 @@
 Pankaj Adhana
 Panjab university;
 */
-
-/* Defined values---------------------------------------------------- */
+/* Defined values----------------------------------------------------  */
 #define fast_io ios_base::sync_with_stdio(false);cin.tie(NULL)
 #define cases  int t=1;cin>>t; while(t--) { solve();} return 0
-/*--------------------------------------------------------------------*/
+#define ll long long int
+#define vec vector<ll>
+#define all(v) v.begin(),v.end()
+#define pi 3.14159265358993
+/* -------------------------------------------------------------------- */
 using namespace std;
 void solve()
 {
-  int x,y,val;
+//code here
+ll x,y,val;
   cin>>x>>y;
-  int area=x*y;
-  for(int i=2;i<100;i++)
-  {
-    if(area%(i*i)==0)
-    {
-         val=area/(i*i);
-    }
-  }
-  cout<<val<<endl;
+  ll area=x*y;
+ val=__gcd(x,y);
+  cout<<area/(val*val)<<endl;
 }
-int main() 
-{ 
-    fast_io;
-    cases;
-} 
+int main()
+{
+fast_io;
+cases;
+}
