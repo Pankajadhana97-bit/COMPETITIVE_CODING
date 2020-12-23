@@ -14,34 +14,21 @@ Panjab university;
 using namespace std;
 void solve()
 {
-   string s;
-  cin>>s;
-  int s_len = s.length();
-  int n;
-  cin>>n;
-  while(n--) {
-  	string k;
-  	cin>>k;
-  	int k_len = k.length();
-  	int vis[k_len] = {0};
-  	for(int i =0; i<k_len; i++) {
-  		for(int j = 0; j<s_len; j++) {
-  			if(k[i] == s[j]) vis[i]++;
-  		}
-  	}
-  	bool b = false;
-  	for(int i =0; i<k_len; i++) {
-  		if(vis[i]==0) {
-  			b = true;
-  			break;
-  		}
-  	}
-  	cout<<((b)?"No":"Yes")<<endl;
-  }
+int res=0;
+ for(int i=0;i<5;i++)
+{
+int val; cin>>val;
+res += val;
+}
+if(res==0)cout<<"Beginner"<<endl;
+else if(res==1)cout<<"Junior Developer"<<endl;
+else if(res==2)cout<<"Middle Developer"<<endl;
+else if(res==3)cout<<"Senior Developer"<<endl;
+else if(res==4)cout<<"Hacker"<<endl;
+else if(res==5)cout<<"Jeff Dean"<<endl;
 }
 int main()
 {
 fast_io;
-//cases;
-solve();
+cases;
 }

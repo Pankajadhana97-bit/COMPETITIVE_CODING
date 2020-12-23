@@ -14,34 +14,23 @@ Panjab university;
 using namespace std;
 void solve()
 {
-   string s;
-  cin>>s;
-  int s_len = s.length();
-  int n;
-  cin>>n;
-  while(n--) {
-  	string k;
-  	cin>>k;
-  	int k_len = k.length();
-  	int vis[k_len] = {0};
-  	for(int i =0; i<k_len; i++) {
-  		for(int j = 0; j<s_len; j++) {
-  			if(k[i] == s[j]) vis[i]++;
-  		}
-  	}
-  	bool b = false;
-  	for(int i =0; i<k_len; i++) {
-  		if(vis[i]==0) {
-  			b = true;
-  			break;
-  		}
-  	}
-  	cout<<((b)?"No":"Yes")<<endl;
-  }
+//code here
+ll n;
+cin>>n;
+string str;
+cin>>str;
+ll arr[3]={0};
+for(ll i=0;i<n;i++)
+{
+    if(str[i]=='R')arr[0]++;
+    else if(str[i]=='G')arr[1]++;
+    else if(str[i]=='B')arr[2]++;
+}
+ll mx=*max_element(arr,arr+3);
+cout<<n-mx<<endl;
 }
 int main()
 {
 fast_io;
-//cases;
-solve();
+cases;
 }
