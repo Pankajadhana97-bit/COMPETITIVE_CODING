@@ -14,18 +14,25 @@ Panjab university;
 using namespace std;
 void solve()
 {
-        ll n;
-	    cin>>n;
-		string s1,s2;
-		cin>>s1>>s2;
-		ll cs10=count(s1.begin(),s1.end(),'0');
-		ll cs11=count(s1.begin(),s1.end(),'1');
-		ll cs20=count(s2.begin(),s2.end(),'0');
-		ll cs21=count(s2.begin(),s2.end(),'1');
-		if(cs10==cs20 && cs11==cs21)
-		    cout<<"Yes"<<endl;
-		else
-		    cout<<"No"<<endl;
+ int n;
+ cin>>n;
+ string a;
+ string b;
+ cin>>a>>b;
+ int count=0;
+ bool flag=true;
+ for(int i=0;i<n;i++){
+	 count+=a[i]-'0';
+	 count-=b[i]-'0';
+	 if(count<0){
+	 cout<<"No"<<endl;
+	 return;
+	 }
+ }
+ if(count==0)
+ cout<<"Yes"<<endl;
+ else cout<<"No"<<endl;
+
 }
 int main()
 {

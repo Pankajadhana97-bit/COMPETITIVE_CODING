@@ -18,12 +18,12 @@ void solve()
 string str;
 cin>>str;
 int len=str.size();
-int arr[len]={0};
-for(int i=0;i<len;i++)
-{
- 
-}
+vec freq(26,0);
+for(char c:str)  freq[(int)c-'a']++;
+int sum=0;
+for(int i=0;i<26;i++) sum+=freq[i]/2;
 
+cout<<min(sum,len/3)<<endl;
 }
 int main()
 {
