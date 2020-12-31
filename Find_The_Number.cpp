@@ -15,18 +15,10 @@ using namespace std;
 void solve()
 {
 //code here
-ll n,k;
-cin>>n>>k;
-vector<ll>v(n);
+int n;
+cin>>;
+vec v(n);
 for(auto &x:v)cin>>x;
-sort(all(v));
-ll start=k;
-ll end=n-k;
-long long sum=0;
-for(;start<end;start++) sum+=v[start];
-float val=((1.00*sum)/(n-(2*k)));
-cout<<fixed<<setprecision(6)<<val<<endl;
-
 }
 int main()
 {

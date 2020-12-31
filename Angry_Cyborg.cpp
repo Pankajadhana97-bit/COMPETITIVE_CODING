@@ -15,18 +15,22 @@ using namespace std;
 void solve()
 {
 //code here
-ll n,k;
-cin>>n>>k;
-vector<ll>v(n);
-for(auto &x:v)cin>>x;
-sort(all(v));
-ll start=k;
-ll end=n-k;
-long long sum=0;
-for(;start<end;start++) sum+=v[start];
-float val=((1.00*sum)/(n-(2*k)));
-cout<<fixed<<setprecision(6)<<val<<endl;
-
+ll n,q;
+cin>>n>>q;
+vec v(n+1,0);
+while(q--)
+{
+    ll l,r;
+    cin>>l>>r;
+    ll counter=0;
+    for(ll i=l;i<=r;i++)
+    {
+        counter++;
+        v[i]+=counter;
+    }
+}
+for(ll i=1;i<=n;i++) cout<<v[i]<<" ";
+cout<<endl;
 }
 int main()
 {

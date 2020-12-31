@@ -15,18 +15,23 @@ using namespace std;
 void solve()
 {
 //code here
-ll n,k;
-cin>>n>>k;
-vector<ll>v(n);
-for(auto &x:v)cin>>x;
-sort(all(v));
-ll start=k;
-ll end=n-k;
-long long sum=0;
-for(;start<end;start++) sum+=v[start];
-float val=((1.00*sum)/(n-(2*k)));
-cout<<fixed<<setprecision(6)<<val<<endl;
-
+ll n;
+cin>>n;
+vector<pair<string,string>>p(n);
+map<string,ll>mp;
+for(auto &x:p)
+{
+    cin>>x.first;
+    cin>>x.second;
+    mp[x.first]++;
+}
+//for(auto &x:p)cout<<x.first<<" "<<x.second<<endl;
+for(auto &x:p)
+{
+   if(mp[x.first]>1)
+   cout<<x.first<<" "<<x.second<<endl;
+   else cout<<x.first<<endl;
+}
 }
 int main()
 {

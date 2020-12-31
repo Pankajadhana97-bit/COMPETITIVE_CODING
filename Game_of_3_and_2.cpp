@@ -15,21 +15,24 @@ using namespace std;
 void solve()
 {
 //code here
-ll n,k;
-cin>>n>>k;
-vector<ll>v(n);
+ll n;
+cin>>n;
+vec v(n);
 for(auto &x:v)cin>>x;
 sort(all(v));
-ll start=k;
-ll end=n-k;
-long long sum=0;
-for(;start<end;start++) sum+=v[start];
-float val=((1.00*sum)/(n-(2*k)));
-cout<<fixed<<setprecision(6)<<val<<endl;
-
+if(n%3==0)
+{
+for(ll i=0;i<n/3;i++)
+cout<<v[i]*3<<" "<<v[i]<<" "<<v[i]*2<<" ";
+}
+if(n%3==1)
+{
+    for(int i=0;)
+}
 }
 int main()
 {
 fast_io;
-cases;
+//cases;
+solve();
 }

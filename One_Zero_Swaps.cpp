@@ -32,7 +32,6 @@ void solve()
  if(count==0)
  cout<<"Yes"<<endl;
  else cout<<"No"<<endl;
-
 }
 int main()
 {

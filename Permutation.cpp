@@ -1,4 +1,5 @@
-#include<bits/stdc++.h>
+#include<iostream>
+#include<vector>
 /*
 Pankaj Adhana
 Panjab university;
@@ -15,21 +16,31 @@ using namespace std;
 void solve()
 {
 //code here
-ll n,k;
-cin>>n>>k;
-vector<ll>v(n);
-for(auto &x:v)cin>>x;
-sort(all(v));
-ll start=k;
-ll end=n-k;
-long long sum=0;
-for(;start<end;start++) sum+=v[start];
-float val=((1.00*sum)/(n-(2*k)));
-cout<<fixed<<setprecision(6)<<val<<endl;
-
+ll n;
+cin>>n;
+vec res;
+ll i;
+for(i=1;i<=n;i++)
+{
+    ll num;
+    cin>>num;
+    if(num!=i)
+    res.push_back(num);
+}
+ll len=res.size();
+bool flag=true;
+for(int i=0;i<len;i++)
+{
+    if(res[i]<res[i+1]){flag=false;break;}
+}
+if((len!=0)  and flag==true)
+cout<<res[len-1]<<" "<<res[0];
+else 
+cout<<0<<" "<<0<<endl;
 }
 int main()
 {
 fast_io;
-cases;
+//cases;
+solve();
 }

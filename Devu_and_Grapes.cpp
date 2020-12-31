@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<iostream>
 /*
 Pankaj Adhana
 Panjab university;
@@ -14,19 +14,19 @@ Panjab university;
 using namespace std;
 void solve()
 {
-//code here
 ll n,k;
 cin>>n>>k;
-vector<ll>v(n);
-for(auto &x:v)cin>>x;
-sort(all(v));
-ll start=k;
-ll end=n-k;
-long long sum=0;
-for(;start<end;start++) sum+=v[start];
-float val=((1.00*sum)/(n-(2*k)));
-cout<<fixed<<setprecision(6)<<val<<endl;
-
+ll sum=0;
+for(ll i=0;i<n;i++)
+{
+    ll val;cin>>val;
+    if(val>=k){
+    ll mod=val%k;
+    sum+=min(mod,k-mod);
+    }
+    else sum+=(k-val); 
+}
+cout<<sum<<endl;
 }
 int main()
 {

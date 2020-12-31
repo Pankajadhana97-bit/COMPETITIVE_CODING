@@ -15,18 +15,24 @@ using namespace std;
 void solve()
 {
 //code here
-ll n,k;
-cin>>n>>k;
-vector<ll>v(n);
-for(auto &x:v)cin>>x;
-sort(all(v));
-ll start=k;
-ll end=n-k;
-long long sum=0;
-for(;start<end;start++) sum+=v[start];
-float val=((1.00*sum)/(n-(2*k)));
-cout<<fixed<<setprecision(6)<<val<<endl;
-
+int n;
+        cin>>n;
+        if(n%8==0)
+        {cout<<n-1<<"SL"<<endl;}
+        else if(n%8==7)
+        {cout<<n+1<<"SU"<<endl;}
+        else if(n%8==1)
+        {cout<<n+3<<"LB"<<endl;}
+        else if(n%8==4)
+        {cout<<n-3<<"LB"<<endl;}
+        else if(n%8==2)
+        {cout<<n+3<<"MB"<<endl;}
+        else if(n%8==5)
+        {cout<<n-3<<"MB"<<endl;}
+        else if(n%8==3)
+        {cout<<n+3<<"UB"<<endl;}
+        else if(n%8==6)
+        {cout<<n-3<<"UB"<<endl;}
 }
 int main()
 {

@@ -15,18 +15,42 @@ using namespace std;
 void solve()
 {
 //code here
-ll n,k;
-cin>>n>>k;
-vector<ll>v(n);
-for(auto &x:v)cin>>x;
-sort(all(v));
-ll start=k;
-ll end=n-k;
-long long sum=0;
-for(;start<end;start++) sum+=v[start];
-float val=((1.00*sum)/(n-(2*k)));
-cout<<fixed<<setprecision(6)<<val<<endl;
+int n;cin>>n;
+ int k; cin>>k;
+     int a[n];
+      int sum=0;
+      for(int i=0;i<n;i++)
+      {
+          cin>>a[i];
+          if(a[i]%2==0)
+          {
+              sum++;
+          }
+      }
+      if(k==0)
+      {
+          if(sum!=n)
+          {
+              cout<<"YES";
+          }
+          else
+          {
+              cout<<"NO";
+          }
+      }
+      else
+      {
 
+      if(sum>=k)
+      {
+          cout<<"YES";
+      }
+      else
+      {
+          cout<<"NO";
+      }
+      }
+       cout<<endl;
 }
 int main()
 {
