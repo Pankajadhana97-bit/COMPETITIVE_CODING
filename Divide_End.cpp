@@ -15,14 +15,18 @@ using namespace std;
 void solve()
 {
 //code here
-ll n,k;
-cin>>n>>k;
-ll res=n+k;
-cout<<res%10<<endl;
+string n;
+cin>>n;
+bool flag=false;
+for(char c:n){
+    if((c-'0')%2==0)
+    flag=true;
+}
+if(flag)cout<<1<<'\n';
+else cout<<0<<'\n';
 }
 int main()
 {
 fast_io;
- cases;
-//solve()
+cases;
 }

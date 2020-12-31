@@ -15,14 +15,22 @@ using namespace std;
 void solve()
 {
 //code here
-ll n,k;
+int n,k;
 cin>>n>>k;
-ll res=n+k;
-cout<<res%10<<endl;
+map<ll,ll>mp;
+vec v(n);
+for(int i=0;i<n;i++){
+cin>>v[i];
+mp[v[i]]++;
+}
+for(auto it=mp.begin();it!=mp.end();it++){
+    if(it->second>k)
+    cout<<it->first<<" ";
+}
+cout<<"\n";
 }
 int main()
 {
 fast_io;
- cases;
-//solve()
+cases;
 }

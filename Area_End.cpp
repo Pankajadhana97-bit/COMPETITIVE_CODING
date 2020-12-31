@@ -15,14 +15,15 @@ using namespace std;
 void solve()
 {
 //code here
-ll n,k;
-cin>>n>>k;
-ll res=n+k;
-cout<<res%10<<endl;
+ll n;
+cin>>n;
+vec v(n);
+for(auto &x:v)cin>>x;
+sort(all(v));
+cout<<v[n-1]*v[n-2]<<" "<<v[0]*v[1]<<"\n";
 }
 int main()
 {
 fast_io;
- cases;
-//solve()
+cases;
 }

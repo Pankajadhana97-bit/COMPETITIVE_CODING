@@ -15,14 +15,19 @@ using namespace std;
 void solve()
 {
 //code here
-ll n,k;
-cin>>n>>k;
-ll res=n+k;
-cout<<res%10<<endl;
+ll n;
+cin>>n;
+string s=to_string(n);
+ll sum=0;
+for(ll i=0;i<s.size();i++)
+{
+sum+=s[i]-'0';
+}
+if(n%sum==0)cout<<"Yes"<<"\n";
+else cout<<"No"<<"\n";
 }
 int main()
 {
 fast_io;
- cases;
-//solve()
+cases;
 }

@@ -15,14 +15,21 @@ using namespace std;
 void solve()
 {
 //code here
-ll n,k;
-cin>>n>>k;
-ll res=n+k;
-cout<<res%10<<endl;
+ll n;
+cin>>n;
+ll sum=0;
+for(ll i=0;i<n;i++)
+{
+    sum+=pow(i,3);
+}
+for(int i=0;i<=n;i++)
+{
+    sum+=pow(i,3);
+}
+cout<<sum<<"\n";
 }
 int main()
 {
 fast_io;
- cases;
-//solve()
+cases;
 }
