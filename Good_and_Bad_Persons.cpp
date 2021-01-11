@@ -14,8 +14,10 @@ Panjab university;
 using namespace std;
 void solve()
 {
-//code here
-
+char k;
+cin>>k;
+int num=k-'a';
+cout<<num;
 }
 int main()
 {

@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<iostream>
 /*
 Pankaj Adhana
 Panjab university;
@@ -14,12 +14,13 @@ Panjab university;
 using namespace std;
 void solve()
 {
-//code here
-
+ll n;
+cin>>n;
+cout<<(n*(n-1))/2<<"\n";
 }
 int main()
 {
 fast_io;
 cases;
-//solve()
+//solve();
 }

@@ -15,7 +15,17 @@ using namespace std;
 void solve()
 {
 //code here
-
+ll n;
+cin>>n;
+vec v(n);
+for(auto &x:v)cin>>x;
+sort(all(v));
+for(ll i=0;i,n;i++)
+if(v[i]==1)
+{
+    cout<<i<<"\n";
+    break;
+}
 }
 int main()
 {

@@ -15,7 +15,14 @@ using namespace std;
 void solve()
 {
 //code here
-
+int n;
+cin>>n;
+int sum=0;
+for(int i=0;i<=n;i++)
+sum+=pow(i,2);
+for(int i=1;i<n;i++)
+sum+=pow(i,2);
+cout<<sum<<"\n";
 }
 int main()
 {

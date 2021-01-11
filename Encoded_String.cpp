@@ -14,8 +14,23 @@ Panjab university;
 using namespace std;
 void solve()
 {
-//code here
-
+    ll n;
+    cin>>n;
+    vector<char>v={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+    string s;
+    cin>>s;
+    for(ll i=0;i<n;i+=4)
+    {
+        string str="";
+        for(ll j=i;j<i+4;j++) 
+        {
+            str+=s[j];
+        } 
+       bitset<8> bits(str);
+       ll ab = bits.to_ulong();
+       cout<<v[ab];
+    }
+    cout<<endl;
 }
 int main()
 {

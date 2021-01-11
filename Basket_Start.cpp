@@ -15,7 +15,21 @@ using namespace std;
 void solve()
 {
 //code here
-
+ll n,m;
+cin>>n>>m;
+vec v(n+m);
+for(auto &x:v)cin>>x;
+map<ll,ll>mp;
+for(ll i=0;i<m+n;i++)
+{
+    mp[v[i]]++;
+}
+for(auto it=mp.begin();it!=mp.end();it++)
+{
+    if(it->second>1)
+    cout<<it->first<<" ";
+}
+cout<<"\n"<<endl;
 }
 int main()
 {
