@@ -5,38 +5,40 @@ Panjab university;
 */
 /* Defined values----------------------------------------------------  */
 #define fast_io ios_base::sync_with_stdio(false);cin.tie(NULL)
-#define cases  int t=1;cin>>t; while(t--) { solve();} return 0
+#define cases long long int t=1;cin>>t; while(t--) { solve();} return 0
 #define ll long long int
 #define vec vector<int>
+#define deb(x) cout << #x << x << endl;
 #define all(v) v.begin(),v.end()
-#define pi 3.14159265358993
+#define pi 3.1415926535897932384626433832795
 /* -------------------------------------------------------------------- */
 using namespace std;
 void solve()
 {
-int n,k;
-cin>>n>>k;
-string str;
-cin>>str;
-string s=str;
-transform(all(s),s.begin(),::toupper);
-int c=0,c1=0;
+//code here
+int n;
+cin>>n;
+vec v(n);
+for(auto &x:v)cin>>x;
+vec hash(1001,0);
 for(int i=0;i<n;i++)
 {
-    if(s[i]==str[i])c++;
-    else c1++;
+    hash[v[i]]++;
 }
-if(c<=k and c1>k)
-cout<<"chef"<<endl;
-else if(c1<=k and c>k)
-cout<<"brother"<<endl;
-else if(c>k and c1>k)
-cout<<"none"<<endl;
-else cout<<"both"<<endl;
+int sum=0;
+for(int i=0;i<1001;i++)
+{
+ if(hash[i]>0)
+ {
+  float res=hash[i]/2.0;
+  sum+= ceil(res);
+ }
+}
+cout<<sum<<endl;
 }
 int main()
 {
 fast_io;
-cases;
-//solve()
+//cases;
+solve();
 }
