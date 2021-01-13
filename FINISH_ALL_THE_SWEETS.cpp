@@ -39,6 +39,5 @@ cout<<sum<<endl;
 int main()
 {
 fast_io;
-//cases;
 solve();
 }

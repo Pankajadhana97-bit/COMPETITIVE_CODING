@@ -15,7 +15,7 @@ Panjab university;
 using namespace std;
 void solve()
 {
-// this que is best solved using two pointer technique 
+// This que is best solved using two pointer technique 
 ll n;
 cin>>n;
 vec arr(n);
@@ -32,10 +32,9 @@ if(arr[i]*2 <= arr[pointer])
 	arr[i]=-1;
 	pointer--;
 	count++;
-
 	}
-}
-else pointer--;
+    }
+    else pointer--;
 	}
 	cout<<n-count;
 }
