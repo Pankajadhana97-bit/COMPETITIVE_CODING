@@ -16,8 +16,7 @@ int vis[100001];
 void dfs(int node)
 {
 	vis[node] = 1;
- 
-	for(int child : ar[node])
+	for(int child:ar[node])
 	  if(!vis[child])
 	    dfs(child);
  
@@ -29,23 +28,20 @@ void solve()
  
 	for(int i=1;i<=m;i++)
 	{
-	int	a,b;
-	cin>>a>>b ;
+	int a,b;
+	cin>>a>>b;
 	 ar[a].push_back(b);
 	 ar[b].push_back(a);
 	}
- 
 	int cc = 0;
- 
+
 	for(int i=1;i<=n;i++)
 	if(!vis[i])
 	dfs(i) , cc++;
- 
 	cout<<cc;
 }
 int main() 
 { 
     fast_io;
-   // cases;
     solve();
 } 

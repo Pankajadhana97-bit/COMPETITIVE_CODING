@@ -6,10 +6,10 @@ using namespace std;
 // if it contain then it is a graph then print NO
 
 vector<int> arr[1000001];
-int visited[1000001];
+bool visited[1000001];
 void dfs(int node)
 {
-    visited[node]=1;
+    visited[node]=true;
     for(auto kid : arr[node])
     if(visited[kid]==0)
     {
@@ -32,14 +32,13 @@ for(int i=1;i<=n;i++)
 int count =0;
 for(int i=1;i<=n;i++)
 {
-    if(visited[i]==0)
+    if(!visited[i])
     dfs(i),count++;
 }
-   if(count==1 && m==n-1)
+   if(count==1 and m==n-1)
     cout<<"Yes"<<endl;
     else
     cout<<"No"<<endl;
-
     return 0;
 }
 

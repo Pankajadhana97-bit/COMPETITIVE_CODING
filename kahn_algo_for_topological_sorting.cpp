@@ -13,28 +13,46 @@ Panjab university;
 #define pi 3.1415926535897932384626433832795
 /* -------------------------------------------------------------------- */
 using namespace std;
+vector<int> graph[100001];
+vector<int> res;
+int in[100001];
+void kahn(int n)
+{
+	queue<int> q;
+	for(int i=1;i<=n;i++)
+	if(in[i]==0)
+		q.push(i);
+	while(!q.empty())
+	{
+		int curr=q.front();
+		  q.pop();
+		  res.push_back(curr);
+		 for(int child:graph[curr])
+		 {
+		 	in[child]--;
+		 	if(in[child]==0)
+		 	q.push(child);
+		 }
+	}
+	for(auto kid:res)
+    cout<<kid<<" ";
+}
 void solve()
 {
-//code here
-int n;
-cin>>n;
-string s;
-cin>>s;
-bool flag=false;
-for(int i=0;i<n-1;i++)
+int n,e;
+cin>>n>>e;
+for(int i=0;i<e;i++)
 {
- if(s[i]==s[n-1])
- {
-  flag=true;
-  break;
- }
+	int a,b;
+	cin>>a>>b;
+	graph[a].push_back(b);
+	in[b]++;
 }
-if(flag) cout<<"YES"<<endl;
-else cout<<"NO"<<endl;
+kahn(n);
 }
 int main()
 {
 fast_io;
-cases;
-//solve();
+//cases;
+solve();
 }
