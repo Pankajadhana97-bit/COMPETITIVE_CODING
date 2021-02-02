@@ -1,43 +1,33 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
-const int N=1e5+10;
-int parent[N];
-int Rank[N];
-
-int find(int a){
-    if(a==parent[a])
-    return a;
-    return parent[a]=find(parent[a]);
+#define int long long
+int arr[1000][1000];
+void floyd(int n,int m){
+	for(int k=0;k<=n;k++){
+		for(int i=0;i<=n;i++){
+			for(int j=0;j<=n;j++){
+				if(arr[k][j] < INT_MAX and arr[i][k] < INT_MAX )
+              arr[i][j]=min(arr[i][i],arr[k][j]+arr[i][k]);
+			}
+		}
+	}
 }
-
-void connect(int a,int b){
-    a=find(a);
-    b=find(b);
-    if(a==b)return;
-    if(Rank[a]>Rank[b]){
-    parent[b]=a;
-    Rank[a]+=Rank[b];
-    }
-    else{
-     parent[a]=b;
-     Rank[b]+=Rank[a];
-    }
-}
-
-int main(){
-    int n,m;
-    cin>>n>>m;
-    for(int i=1;i<=n;i++){
-        parent[i]=i;
-        Rank[i]=1;
-    }
-    while(m--){
-        int a,b;
-        cin>>a>>b;
-        connect(a,b);
-    }
-    for(int i=1;i<=n;i++){
-        int par=find(i);
-        cout<<Rank[par]-1<<" ";
-    }
+signed main(){
+	int n,m;
+	cin>>n>>m;
+	for(int i=0;i<=n;i++){
+		for(int j=0;j<=m;j++){
+             arr[i][j]=INT_MAX;
+		}
+	}
+	while(m--){
+		int a,b,w;
+		cin>>a>>b>>w;
+		arr[a][b]=w;
+	}
+	floyd(n,m);
+	int src,dest;
+	cin>>src>>dest;
+	cout<<arr[src][dest]<<endl;
+	return 0;
 }
