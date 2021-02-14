@@ -16,12 +16,12 @@ using namespace std;
 const int N=1e6+1;
 vector<pii>adj[N];
 void dijkstra(int src,vector<int> &dist,vector<int> &parent){
-    priority_queue<pii,vector<pii>,greater<pii>>pq;
+    priority_queue<pii,vector<pii>,greater<pii>>pq; // min heap in the binary search tree
     pq.push({0,src});
     dist[src]=0;
     while(!pq.empty()){
         int curr=pq.top().ss;
-        int curr_d=pq.top().ff;
+        int curr_d=pq.top().ff;  
         pq.pop();
         for(pii child:adj[curr]){
             if(curr_d+child.ss <dist[child.ff])
@@ -56,6 +56,5 @@ else
 int main()
 {
 fast_io;
-//cases;
 solve();
 }
