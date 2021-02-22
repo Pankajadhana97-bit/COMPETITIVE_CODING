@@ -31,7 +31,7 @@ void dijkstra(int src,vector<int> &dist,vector<int> &parent){
                 pq.push({dist[child.ff],child.ff});
             }
         }
-    }
+    } 
 }
 void solve()
 {
